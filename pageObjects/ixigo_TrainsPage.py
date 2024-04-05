@@ -4,7 +4,7 @@ from selenium import webdriver
 from selenium.webdriver import ActionChains, Keys
 from selenium.webdriver.common.by import By
 
-from pytest_Selenium_framework.utility.common_functions import commonfunctions
+from utility.common_functions import commonfunctions
 
 
 class Ixigo_TrainPage(commonfunctions):

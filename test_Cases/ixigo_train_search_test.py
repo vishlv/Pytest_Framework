@@ -1,8 +1,8 @@
 import time
 
-from pytest_Selenium_framework.pageObjects.ixigo_TrainsPage import Ixigo_TrainPage
-from pytest_Selenium_framework.utility.setupp import Setup
-from selenium import webdriver
+from pageObjects.ixigo_TrainsPage import Ixigo_TrainPage
+from utility.setupp import Setup
+
 
 class ixigo_train_search_test(Ixigo_TrainPage):
 
@@ -14,7 +14,4 @@ class ixigo_train_search_test(Ixigo_TrainPage):
         trains = Ixigo_TrainPage(self.driver)
         trains.select_book_train_option_xpath().click()
         trains.select_journey_details()
-        # trains.setJourneyTo_xpath().click()
-        # trains.setJourneyTo_xpath().send_keys("Gorakhpur")
-        # trains.click_search_button_xpath().click()
         time.sleep(5)
