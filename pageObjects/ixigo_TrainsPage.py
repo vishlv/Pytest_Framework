@@ -33,3 +33,6 @@ class Ixigo_TrainPage(commonfunctions):
         element = self.driver.find_element(By.XPATH, self.search_btn)
         return element
 
+
+
+

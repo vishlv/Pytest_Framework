@@ -1,7 +1,8 @@
-import pytest
+from pageObjects.ixigo_TrainsPage import Ixigo_TrainPage
+from utility.setupp import Setup
 
-from test_Cases.ixigo_train_search_test import ixigo_train_search_test
 
-
-def test_trains_page():
-    ixigo_train_search_test().search_train_from_mumbai_to_gorakhpur()
+def test_search_train_from_mumbai_to_gorakhpur():
+    setup_driver = Setup("https://www.ixigo.com/trains").setup_website()
+    trainPage = Ixigo_TrainPage(setup_driver)
+    trainPage.select_journey_details()
