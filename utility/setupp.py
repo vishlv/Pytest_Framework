@@ -1,7 +1,6 @@
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
-from webdriver_manager.chrome import ChromeDriverManager
-from selenium.webdriver.chrome.service import Service as ChromeService
+import chromedriver_autoinstaller
 
 
 class Setup:
@@ -16,7 +15,8 @@ class Setup:
         # driver_path = "D://WebDrivers//chromedriver-win64//chromedriver.exe"
         # service = Service(executable_path=driver_path)
         # driver = webdriver.Chrome(service=service, options=chrome_opt)
-        driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()), options=chrome_opt)
+        chromedriver_autoinstaller.install()
+        driver = webdriver.Chrome(options=chrome_opt)
         driver.delete_all_cookies()
         driver.get(self.url)
         driver.set_page_load_timeout(3000)
