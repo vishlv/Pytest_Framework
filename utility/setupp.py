@@ -8,7 +8,7 @@ class Setup:
         self.url = url
 
     def setup_website(self):
-        chrome_opt = Options()
+        # chrome_opt = Options()
         # chrome_opt.add_argument('--headless')
         # chrome_opt.add_argument('--disable-gpu')
         # chrome_opt.binary_location = "D://WebDrivers//chrome-win64//chrome.exe"
@@ -16,7 +16,7 @@ class Setup:
         # service = Service(executable_path=driver_path)
         # driver = webdriver.Chrome(service=service, options=chrome_opt)
         chromedriver_autoinstaller.install()
-        driver = webdriver.Chrome(options=chrome_opt)
+        driver = webdriver.Chrome()
         driver.delete_all_cookies()
         driver.get(self.url)
         driver.set_page_load_timeout(3000)
