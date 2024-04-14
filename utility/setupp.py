@@ -15,8 +15,8 @@ class Setup:
         # driver_path = "D://WebDrivers//chromedriver-win64//chromedriver.exe"
         # service = Service(executable_path=driver_path)
         # driver = webdriver.Chrome(service=service, options=chrome_opt)
-        chromedriver_autoinstaller.install()
-        driver = webdriver.Chrome()
+        # chromedriver_autoinstaller.install()
+        driver = webdriver.Chrome(chromedriver_autoinstaller.install())
         driver.delete_all_cookies()
         driver.get(self.url)
         driver.set_page_load_timeout(3000)
