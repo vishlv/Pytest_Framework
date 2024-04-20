@@ -24,6 +24,7 @@ class Commonfunctions:
                       'May':'05','June':'06','July':'07','August':'08'
                         ,'September':'09','October':'10','November':'11','December':'12'}
         month_element = self.driver.find_element(By.XPATH, "(//div[@class='rd-month-label'])[1]")
+        self.element_visibility_check(month_element)
         next_btn = self.driver.find_element(By.XPATH, "//button[@class='ixi-icon-arrow rd-next']")
         while month_element.text != month_year:
             EC.element_to_be_clickable(next_btn)
